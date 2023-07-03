@@ -1,17 +1,35 @@
  /* The animation code */
-@keyframes animatedSquare {
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: green;}
+@keyframes flip-animation {
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+/*Image will flip on the x-axis*/
 }
 
-/* The element to apply the animation to */
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  animation-name: animatedSquare;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;    
-} 
+
+
+.image-animation:hover {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.image-animation:hover {
+  animation-name: flip-animation;
+  animation-duration: 3s, 2s;
+  /*set time for each animation before the next starts*/
+  animation-timing-function: linear, ease-in-out;
+  /*set the timing funtions for each animation*/
+  animation-iteration-count: infinite;
+  /*forever repeat animation*/
+
+}
+
+ /* The element to apply the animation to */
+ img {
+   position: absolute;
+   padding-top: 30px;
+   padding-left: 30px;
+ }
