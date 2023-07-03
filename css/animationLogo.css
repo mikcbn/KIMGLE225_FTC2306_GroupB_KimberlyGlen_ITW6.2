@@ -9,8 +9,6 @@
 /*Image will flip on the x-axis*/
 }
 
-
-
 .image-animation:hover {
   filter: invert(100%);
   -webkit-filter: invert(100%);
